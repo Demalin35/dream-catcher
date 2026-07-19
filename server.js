@@ -1,10 +1,9 @@
-import dotenv from "dotenv";
-dotenv.config();
-
+import "dotenv/config";
 import express from "express";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import helmet from "helmet";
+import pool from "./config/database.js";
 import { initDatabase } from "./config/database-init.js";
 import dreamsRouter from "./routes/dreams.js";
 
