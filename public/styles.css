@@ -5,9 +5,17 @@
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes fadeInUp {
@@ -21,14 +29,18 @@
     }
 }
 
-@keyframes glow {
-    0%, 100% { text-shadow: 0 0 10px rgba(102, 126, 234, 0.5); }
-    50% { text-shadow: 0 0 20px rgba(102, 126, 234, 0.8); }
-}
-
 body {
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-color: #242033;
+    background-image: linear-gradient(
+        -45deg,
+        #35304f,
+        #665878,
+        #88758f,
+        #62758f,
+        #7d6f91,
+        #4e5875
+    );
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     min-height: 100vh;
@@ -59,8 +71,9 @@ header h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
     font-weight: 700;
-    animation: glow 3s ease-in-out infinite;
     letter-spacing: 1px;
+    text-shadow: none;
+    animation: none;
 }
 
 .subtitle {
